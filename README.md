@@ -1,4 +1,4 @@
-# [string me_along](https://faishasj.github.io)
+# [string me_along](https://faishasj.github.io/blog)
 
 > Computer science, maths and the in-between.
 
@@ -12,7 +12,6 @@ Just my personal blog. Built with Jekyll and hosted here on Github Pages!
 
 ```bash
 $ git clone https://github.com/faishasj/blog
-
 $ cd blog
 ```
 
