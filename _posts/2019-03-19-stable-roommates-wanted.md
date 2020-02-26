@@ -56,31 +56,31 @@ The algorithm can be split up into three different phases so we will be going th
 
 In this phase, the roommates propose to their top preference, similar to SMP. However, when a roommate receives more than one proposal, they hold the proposal from the person they most prefer and symmetrically reject all other proposals – this means that whilst the proposee removes the proposer from their list of potential roommates, the proposer must also remove the proposee from their list. If a proposer is rejected, they must propose to the next highest person on their list. This phase lasts until everyone has successfully proposed:
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide1.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide1.png)</span>
 
 Randall proposes to Scout. Scout has not received any prior proposals, so she holds his proposal. Scout and Ramona both propose to Atticus, so now he holds two proposals.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide2.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide2.png)</span>
 
 Atticus rejects Ramona’s proposal because Scout is ranked higher on his list. Symmetrically, Ramona rejects Atticus. She now proposes to Molly who holds her proposal.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide3.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide3.png)</span>
 
 Next, Jay and Atticus both propose to Randall, who is now holding two proposals.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide4.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide4.png)</span>
 
 Randall chooses to hold Atticus’ proposal, therefore Randall and Jay symmetrically reject each other. Jay moves on to propose to Ramona, who holds his proposal.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide5.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide5.png)</span>
 
 Molly is the only one who has not successfully proposed, so she proposes to Scout.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide6.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide6.png)</span>
 
 Scout is already holding a proposal from Randall, who is ranked higher on his list than Molly. Molly and Scout symmetrically reject each other. She then proposes to Randall.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide7.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide7.png)</span>
 
 Unfortunately, Randall is also already holding a proposal from Atticus, who is higher up on his list than Molly. Randall and Molly symmetrically reject each other. She now proposes to Jay, who has not received any prior proposals. He now holds her proposal, and phase 1 of the algorithm ends.
 
@@ -88,11 +88,11 @@ Unfortunately, Randall is also already holding a proposal from Atticus, who is h
 
 Hopefully, you got through the first phase and understood everything! This phase consists of more symmetrical rejections. Each person now symmetrically rejects anyone who is ranked lower than the person they are currently holding a proposal from. To continue demonstrating, let’s first simplify the table so that we are only colour-coding rejections:
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide8.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide8.png)</span>
 
 Since this phase is fairly straightforward, let’s jump ahead to the end.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide9.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide9.png)</span>
 
 As an example, Randall is holding a proposal from Atticus, but Molly and Jay have already been rejected so we don’t need to do anything there. Scout is holding a proposal from Randall, so Scout rejects Ramona and Ramona rejects Scout. This continues until there are no more symmetrical rejections to be made. Everyone now has a reduced list of preferences.
 
@@ -113,7 +113,7 @@ If the table is unstable, no stable matchings can be found for this set of roomm
 
 Now that we have determined our Phase 2 table is stable, we can move on to the next phase. The steps in this phase are a little harder to grasp, so I’ll try my best to explain. Let’s create another table with rows labelled p and q.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide10.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide10.png)</span>
 
 We start the rotation by choosing any individual to place in p<sub>0</sub> and proceeding as follows:
 
@@ -121,19 +121,19 @@ q<sub>i</sub> is the second preference of p<sub>i</sub>.
 p<sub>i+1</sub> is the last preference of q<sub>i</sub>.
 We continue until the same name appears in the same row twice. Let’s choose Randall and fill up the table.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide11.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide11.png)</span>
 
 Starting with Randall, his second preference out of his reduced list is Ramona, so Ramona is placed below Randall in row q. Ramona’s last preference is Jay, so he is placed above and to the right of Ramona in row p. Jay’s second preference is Molly, so she is placed below Jay in row q. Hopefully, you understand how we derive the rest of the table. We stop at Randall in p4 because he has already appeared in that row once.
 
 Once the rotation terminates, for every q<sub>i</sub>, they must symmetrically reject their last preference i.e p<sub>i+1</sub>.
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide12.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide12.png)</span>
 
 This means that Ramona and Jay reject each other, Molly and Ramona reject each other, Randall and Atticus reject each other, and Scout and Randall reject each other.
 
 If at this point, an individual still exists with more than one person in their preference list, the rotation round and subsequent symmetrical rejections must be repeated. However, in our example, everyone has reduced their list to exactly one individual. We’ve found a stable matching!
 
-<span style="display:block;text-align:center">![Table](/assets/images/roommates-slide13.png)</span>
+<span style="display:block;text-align:center">![Table]({{ site.baseurl }}assets/images/roommates-slide13.png)</span>
 
 Our final roommate pairings: Randall and Ramona, Scout and Atticus, and Molly and Jay.
 
