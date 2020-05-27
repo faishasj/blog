@@ -51,19 +51,19 @@ men =   {'Jake':    ['Julia',   'Jane',    'Mimi',    'Amy'],
 
 The following diagrams have the order of preference swapped around (that is, they go from most preferred to least). A little annoying, I know, but it's just nicer for the diagrams to go from most preferred to least, and, for the sake of reducing runtime, the dictionaries for our implementation to go from least preferred to most. Anyway, with these sets of men and women, the algorithm would play out as follows:
 
-<span style="display:block;text-align:center">![Table](/assets/images/marriage-slide1.png)</span>
+<span style="display:block;text-align:center">![Table]({{site.baseurl}}assets/images/marriage-slide1.png)</span>
 
 All of the women <span style="color:#aa00ff;">**propose**</span> to their top preference. Jake receives two proposals, Winston and Roger both receive one and Edward receives zero proposals. Poor Edward.
 
-<span style="display:block;text-align:center">![Table](/assets/images/marriage-slide2.png)</span>
+<span style="display:block;text-align:center">![Table]({{site.baseurl}}assets/images/marriage-slide2.png)</span>
 
 Winston and Roger <span style="color:#83d509;">**accept**</span> their only proposals. Jake has two, so he <span style="color:#83d509;">**accepts**</span> Amy and <span style="color:#fe0000;">**rejects**</span> Mimi because Amy is ranked higher on his list. Mimi is now left single, so she <span style="color:#aa00ff;">**proposes**</span> to Roger, the next highest person on her list.
 
-<span style="display:block;text-align:center">![Table](/assets/images/marriage-slide3.png)</span>
+<span style="display:block;text-align:center">![Table]({{site.baseurl}}assets/images/marriage-slide3.png)</span>
 
 Mimi is ranked higher on Roger’s list than Jane, his current fiancée. So he <span style="color:#fe0000;">**rejects**</span> Jane and <span style="color:#83d509;">**accepts**</span> Mimi. Now Jane is left single, so she <span style="color:#aa00ff;">**proposes**</span> to Edward.
 
-<span style="display:block;text-align:center">![Table](/assets/images/marriage-slide4.png)</span>
+<span style="display:block;text-align:center">![Table]({{site.baseurl}}assets/images/marriage-slide4.png)</span>
 
 Edward has had no proposals thus far, so he <span style="color:#83d509;">**accepts**</span> Jane. All of the couples have been matched and the algorithm stops. Congratulations Mimi and Roger, Julia and Winston, Amy and Jake, and Jane and Edward! Thanks to Gale and Shapley, you have all avoided disastrous marriages. You are all very welcome.
 

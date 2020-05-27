@@ -33,7 +33,7 @@ The Spirograph toy traces out two kinds of roulettes, namely hypotrochoids and e
 
 A hypotrochoid is a roulette in which the fixed point is attached to a circle that rolls *inside* a stationary circle. We can draw hypotrochoids with the Spirograph by rolling the wheel around the inside of the ring. 
 
-<span style="display:block;text-align:center">![Hypotrochoid](/assets/images/hypo-320-105-70.png)&emsp;&emsp;&emsp;&emsp;![Hypotrochoid](/assets/images/hypo-320-210-160.png)</span>
+<span style="display:block;text-align:center">![Hypotrochoid]({{ site.baseurl }}assets/images/hypo-320-105-70.png)&emsp;&emsp;&emsp;&emsp;![Hypotrochoid]({{ site.baseurl }}assets/images/hypo-320-210-160.png)</span>
 
 ###### Values for LHS curve: $R = 320$, $r = 105$, $p = 70$. Values for RHS curve: $R = 320$, $r = 210$, $p = 160$. Screenshots taken with the save image feature from my [web app](https://faishasj.github.io/spirograph/).
 
@@ -75,7 +75,7 @@ $$y(t) = (R - r)\sin(t) - p\sin(\frac{R - r}{r} t)$$
 
 An epitrochoid is a roulette in which the fixed point is attached to a circle that rolls along the *outside* of a stationary circle. We can draw epitrochoids with the toy by rolling the wheel around the outside of the ring. 
 
-<span style="display:block;text-align:center">![Epitrochoid](/assets/images/epi-250-85-70.png)&emsp;&emsp;&emsp;&emsp;![Epitrochoid](/assets/images/epi-100-95-140.png)</span>
+<span style="display:block;text-align:center">![Epitrochoid]({{ site.baseurl }}assets/images/epi-250-85-70.png)&emsp;&emsp;&emsp;&emsp;![Epitrochoid]({{ site.baseurl }}assets/images/epi-100-95-140.png)</span>
 
 ###### Values for LHS curve: $R = 250$, $r = 85$, $p = 70$. Values for RHS curve: $R = 100$, $r = 95$, $p = 140$.
 
@@ -149,7 +149,7 @@ function gcd(x, y) {
 
 Now we can calculate the number of petals a Spirograph curve will have. Inserted below are a hypotrochoid and epitrochoid drawn using the same values: $$R = 250$$, $$r = 80$$ and $$p = 50$$:
 
-<span style="display:block;text-align:center">![Hypotrochoid](/assets/images/hypo-250-80-50.png)&emsp;&emsp;&emsp;&emsp;![Epitrochoid](/assets/images/epi-250-80-50.png)</span>
+<span style="display:block;text-align:center">![Hypotrochoid]({{ site.baseurl }}assets/images/hypo-250-80-50.png)&emsp;&emsp;&emsp;&emsp;![Epitrochoid]({{ site.baseurl }}assets/images/epi-250-80-50.png)</span>
 
 If you count the number of petals for both the hypotrochoid and epitrochoid, both the hypotrochoid and epitrochoid have 25 petals. Let's check that:
 
@@ -177,13 +177,13 @@ If $$k$$ is an integer, the curve has $$k$$ cusps:
 
 | k = 3 (deltoid) | k = 4 (astroid) | k = 5 | k = 6 | k = 7 |
 |-------|-------|-------|-------|-------|
-|![Hypocycloid](/assets/images/hypocycloid1.png)|![Hypocycloid](/assets/images/hypocycloid2.png)|![Hypocycloid](/assets/images/hypocycloid3.png)|![Hypocycloid](/assets/images/hypocycloid4.png)|![Hypocycloid](/assets/images/hypocycloid5.png)|
+|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid1.png)|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid2.png)|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid3.png)|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid4.png)|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid5.png)|
 
 ###### Hypocycloids with integer $k$ values.
 
 | k = 1 (cardioid) | k = 2 (nephroid) | k = 3 | k = 4 | k = 5 |
 |-------|-------|-------|-------|-------|
-|![Epicycloid](/assets/images/epicycloid1.png)|![Epicycloid](/assets/images/epicycloid2.png)|![Epicycloid](/assets/images/epicycloid3.png)|![Epicycloid](/assets/images/epicycloid4.png)|![Epicycloid](/assets/images/epicycloid5.png)|
+|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid1.png)|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid2.png)|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid3.png)|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid4.png)|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid5.png)|
 
 ###### Epicycloids with integer $k$ values.
 
@@ -191,13 +191,13 @@ If $$k$$ is a rational number, that is it can be expressed as $$\frac{p}{q}$$ wh
 
 | k = $$\frac{5}{3}$$ | k = $$\frac{7}{3}$$ | k = $$\frac{8}{3}$$ | k = $$\frac{9}{5}$$ | k = $$\frac{10}{7}$$ |
 |-------|-------|-------|-------|-------|
-|![Hypocycloid](/assets/images/hypocycloid6.png)|![Hypocycloid](/assets/images/hypocycloid7.png)|![Hypocycloid](/assets/images/hypocycloid8.png)|![Hypocycloid](/assets/images/hypocycloid9.png)|![Hypocycloid](/assets/images/hypocycloid10.png)|
+|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid6.png)|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid7.png)|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid8.png)|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid9.png)|![Hypocycloid]({{ site.baseurl }}assets/images/hypocycloid10.png)|
 
 ###### Hypocycloids with rational $k$ values.
 
 | k = $$\frac{5}{3}$$ | k = $$\frac{7}{3}$$ | k = $$\frac{8}{3}$$ | k = $$\frac{9}{5}$$ | k = $$\frac{10}{7}$$ |
 |-------|-------|-------|-------|-------|
-|![Epicycloid](/assets/images/epicycloid6.png)|![Epicycloid](/assets/images/epicycloid7.png)|![Epicycloid](/assets/images/epicycloid8.png)|![Epicycloid](/assets/images/epicycloid9.png)|![Epicycloid](/assets/images/epicycloid10.png)|
+|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid6.png)|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid7.png)|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid8.png)|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid9.png)|![Epicycloid]({{ site.baseurl }}assets/images/epicycloid10.png)|
 
 ###### Epicycloids with rational $k$ values.
 

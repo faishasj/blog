@@ -1,14 +1,31 @@
-# [string me_along](https://faishasj.github.io)
+# [string me_along](https://faishasj.github.io/blog)
 
-Just my personal blog. If you stumbled upon this repository and are yet to be convinced that you should have a read, here is an excerpt from my blurg (it's actually the whole thing):
+> Computer science, maths and the in-between.
 
-> Hi there! I'm Faisha. I just like to get a little curious sometimes. And if you also like to get a little curious sometimes too, that's great! Let's be a little curious together (in a completely non-weird way). 
+Just my personal blog. Built with Jekyll and hosted here on Github Pages!
 
->In my posts, I write about random things that pique my interest, which usually fall into the fields of maths and computer science. I don't claim to be an expert in either.
+## Development Quick Start
 
->Currently, I'm completing my undergraduate degree in CS. When I'm not deep into having an existential crisis, I'm starting another random side project that will inevitably be forgotten. 
+1. Install [Jekyll](https://jekyllrb.com/docs/installation/). Included in the link are instructions for installing its dependencies: Ruby, RubyGems, gcc and Make.
 
->Hopefully, this blog is not one of them.
+2. Clone this repository and change directory into the repo folder.
+
+```bash
+$ git clone https://github.com/faishasj/blog
+$ cd blog
+```
+
+3. Install the required gems.
+
+```bash
+$ bundle install
+```
+
+4. Run the following command to start the development server.
+
+```bash
+$ bundle exec jekyll serve
+```
 
 ## Theme
 
